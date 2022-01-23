@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use app\Models\Post;
+use app\Models\User;
  
 
 /*
@@ -22,4 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/posts', function(){
     return Post::all();
+});
+Route::get('/users', function(){
+    return User::all();
 });
